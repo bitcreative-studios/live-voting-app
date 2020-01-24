@@ -1,5 +1,6 @@
 # Live Voting App
 [![Build Status](https://travis-ci.com/bitwhys/live-voting-app.svg?branch=master)](https://travis-ci.com/bitwhys/live-voting-app)
+
 A fullstack WebSockets powered application for organizing entity selection at events through live voting built with React, Redux and Immutable.js
 
 ## The App
