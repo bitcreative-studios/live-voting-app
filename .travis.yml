@@ -1,3 +1,9 @@
 language: node_js
 node_js:
   - lts/*
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "2b8ff67d-de87-4eb4-9f7a-3817e1b9f440"
+  app: bitwhys-live-voting
