@@ -1,4 +1,4 @@
-import { List } from "immutable"
+import { List, Map } from "immutable"
 
 /**
  *
@@ -6,7 +6,19 @@ import { List } from "immutable"
  * @param entries
  * @return {*}
  */
-function setEntries(state, entries) {
+export function setEntries(state, entries) {
   return state.set("entries", List(entries))
 }
-export default setEntries
+
+/**
+ *
+ * @param state
+ * @return {*}
+ */
+export function next(state) {
+  const entries = state.get("entries")
+  return state.merge({
+    vote: Map({ pair: entries.take(2) }),
+    entries: entries.skip(2),
+  })
+}
