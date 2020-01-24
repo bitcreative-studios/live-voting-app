@@ -1,0 +1,16 @@
+{
+  "extends": ["airbnb","prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020
+  },
+  "env": {
+    "mocha": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+  }
+}

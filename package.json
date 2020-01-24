@@ -1,0 +1,41 @@
+{
+  "name": "live-voting-app",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "George Bockari <bitwhys@gmail.com>",
+  "license": "MIT",
+  "repository": "git@github.com:bitwhys/live-voting-app.git",
+  "scripts": {
+    "test": "mocha --require @babel/register --require ./test/test_helper.js",
+    "test:watch": "yarn test --watch"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.5.0",
+    "chai": "^4.2.0",
+    "chai-immutable": "^2.1.0",
+    "cz-conventional-changelog": "3.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "mocha": "^7.0.0",
+    "prettier": "^1.19.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12"
+  }
+}
