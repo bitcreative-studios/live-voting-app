@@ -6,18 +6,21 @@
   "license": "MIT",
   "repository": "git@github.com:bitwhys/live-voting-app.git",
   "scripts": {
+    "start": "npx babel-node server/index.js",
     "test": "mocha --require @babel/register --require ./test/test_helper.js",
     "test:watch": "yarn test --watch"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/register": "^7.8.3",
     "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
     "@types/node": "^13.5.0",
     "@types/redux": "^3.6.0",
+    "@types/socket.io": "^2.1.4",
     "chai": "^4.2.0",
     "chai-immutable": "^2.1.0",
     "cz-conventional-changelog": "3.0.2",
@@ -38,6 +41,7 @@
   },
   "dependencies": {
     "immutable": "^4.0.0-rc.12",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "socket.io": "^2.3.0"
   }
 }
