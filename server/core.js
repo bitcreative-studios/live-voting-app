@@ -4,7 +4,7 @@ import { List, Map } from "immutable"
  *
  * @param {Map} state
  * @param {List | Iterable} entries
- * @return {*}
+ * @return {Map}
  */
 export function setEntries(state, entries) {
   return state.set("entries", List(entries))
@@ -34,6 +34,12 @@ function getWinners(vote) {
  */
 export function next(state) {
   const entries = state.get("entries").concat(getWinners(state.get("vote")))
+  if (entries.size === 1) {
+    return state
+      .remove("vote")
+      .remove("entries")
+      .set("winner", entries.first())
+  }
   return state.merge({
     vote: Map({ pair: entries.take(2) }),
     entries: entries.skip(2),
